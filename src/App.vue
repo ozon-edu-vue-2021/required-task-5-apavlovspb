@@ -1,14 +1,23 @@
 <template>
   <div id="app">
+    <!-- <Store />
+    <Basket /> -->
+    <router-view />
   </div>
 </template>
 
 <script>
-
+// import Basket from "@/views/Basket/Basket.vue";
+// import Store from "@/views/Store/Store.vue";
 export default {
   name: "App",
   components: {
-    Form,
+    // Basket,
+    // Store,
+  },
+  created: function () {
+    // `this` указывает на экземпляр vm
+    this.$store.dispatch("products");
   },
 };
 </script>
